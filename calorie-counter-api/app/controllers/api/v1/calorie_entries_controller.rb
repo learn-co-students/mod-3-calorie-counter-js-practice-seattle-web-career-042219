@@ -16,7 +16,6 @@ class Api::V1::CalorieEntriesController < ApplicationController
   # POST /api/v1/calorie_entries
   def create
     @api_v1_calorie_entry = Api::V1::CalorieEntry.new(api_v1_calorie_entry_params)
-
     if @api_v1_calorie_entry.save
       render json: @api_v1_calorie_entry, status: :created, location: @api_v1_calorie_entry
     else
