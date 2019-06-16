@@ -86,11 +86,6 @@ function calculateSum() {
   for (let i = 0; i < calTotal.length; i++) {
     sum += parseInt(calTotal[i].innerText, 10);
   }
-  //   calTotal.forEach(function(element) {
-  //     let sum = 0;
-  //     sum += element.calorie;
-  //   });
-
   progressBar.value = sum;
 }
 
@@ -104,9 +99,6 @@ function calculateBMI() {
   document.getElementById("higher-bmr-range").innerHTML = higherRange;
   let progressBar = document.getElementById("progress-bar");
   progressBar.max = (lowerRange + higherRange) / 2;
-  console.log("lowerRange=", lowerRange);
-  console.log("higherRange=", higherRange);
-  console.log("progressBar.max=", progressBar.max);
 }
 
 function postEntry(e) {
