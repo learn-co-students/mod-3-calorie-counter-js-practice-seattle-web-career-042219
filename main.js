@@ -103,7 +103,10 @@ function calculateBMI() {
   document.getElementById("lower-bmr-range").innerHTML = lowerRange;
   document.getElementById("higher-bmr-range").innerHTML = higherRange;
   let progressBar = document.getElementById("progress-bar");
-  progressBar.max = lowerRange + higherRange / 2;
+  progressBar.max = (lowerRange + higherRange) / 2;
+  console.log("lowerRange=", lowerRange);
+  console.log("higherRange=", higherRange);
+  console.log("progressBar.max=", progressBar.max);
 }
 
 function postEntry(e) {
@@ -169,5 +172,7 @@ function deleteEntry(datum, li) {
   })
     .then(res => res.json)
     .then(li.remove())
+    .then(calculateSum())
+    .then(calculateBMI())
     .catch(err => console.log(err));
 }
