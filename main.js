@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-// your code here, it may be worth it to ensure this file only runs AFTER the dom has loaded.
-
-document.addEventListener("DOMContentLoaded", () => {});
-=======
 document.addEventListener("DOMContentLoaded", () => {
   getCall();
   addListeners();
@@ -173,4 +168,3 @@ function deleteEntry(datum, li) {
     .then(calculateBMI())
     .catch(err => console.log(err));
 }
->>>>>>> e8d4b5563b2d3197de5901b63612f5ec245760ec
